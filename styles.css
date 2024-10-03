@@ -1,0 +1,130 @@
+html
+{
+  font-size: 18px;
+  color: #2D3748;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Two columns: main content and sidebar */
+  grid-template-rows: auto 1fr auto; /* Header, main section, footer */
+  grid-template-areas: 
+    "header header"
+    "main sidebar"
+    "footer footer"; /* Layout defined */
+  gap: 20px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/*HEADER FOR WEBPAGE*/
+header 
+{
+  grid-area: header;
+  text-align: center; /* Center aligns the text */
+  color: #FFFFFF;
+  background-color: #63B3ED ; /* Optional: Adds background color */
+  padding: 20px; /* Optional: Adds some padding */
+  font-size: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;                  /* Establishes a flex container */
+  align-items: center;           /* Vertically centers the items */
+  justify-content: center;       /* Horizontally centers the items */
+  flex-direction: column;        /* Stack items vertically */
+}
+header img
+{
+  width: 200px;
+  height:200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  display: flex;                  /* Establishes a flex container */
+  align-items: center;           /* Vertically centers the items */
+  justify-content: center;       /* Horizontally centers the items */
+  flex-direction: column;        /* Stack items vertically */
+}
+
+/*MAIN CONTENT FOR WEBPAGE*/
+main 
+{
+  grid-area: main;
+  padding: 20px;
+  background-color: #ffffff;
+}
+h2 
+{
+  font-size: 32px;
+  text-align: center;
+  color: #48BB78;
+}
+p.date
+{
+  color:#718096;
+}
+article {
+  margin-bottom: 30px; /* Adds space below each article */
+  padding: 20px;
+  background-color: white; /* Optional: Set a background color to visually separate each article */
+  border: 1px solid #48BB78; /* Optional: Add a subtle border to each article */
+  border-radius: 8px; /* Optional: Rounded corners */
+  color: black;
+}
+.blog-post img 
+{
+  float: left;
+  margin-right: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 0%;
+  clear: both;
+  margin-bottom: 40px;
+}
+.blog-post-right img 
+{
+  float: right;
+  margin-left: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 0%;
+  clear: both;
+  margin-bottom: 40px;
+}
+
+/*SIDEBAR FOR WEBPAGE*/
+.sidebar 
+{
+  grid-area: sidebar;
+  padding: 20px;
+  background-color: #e2e8f0;
+}
+.About
+{
+  margin-bottom: 20px; /* Adds space below each section */
+  background-color: #E2E8F0; /* Optional: Adds a light background color to each section */
+  border: 1px solid #ddd; /* Optional: Adds a subtle border to each section */
+  padding: 20px;
+  color: #000000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.Social, .Archives
+{
+  color: #48BB78;
+  margin-bottom: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a 
+{
+  color: #4299E1;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+/*FOOTER FOR WEBPAGE*/
+footer {
+  grid-area: footer;
+  background-color: #2C5282;
+  color:  #FFFFFF;
+  text-align: center;
+  padding: 10px;
+}
